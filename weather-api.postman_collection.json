@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Weather API Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Weather Single",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"latitude\": 35.6895,\n  \"longitude\": 139.6917,\n  \"date\": \"3/1/2024\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/weather/single",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "weather",
+            "single"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Weather Batch",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "locations.csv"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/weather/batch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "weather",
+            "batch"
+          ]
+        }
+      }
+    }
+  ]
+}

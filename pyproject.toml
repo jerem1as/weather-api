@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "weather-api"
+version = "0.1.0"
+description = "A lightweight API that fetches historical weather data using Open-Meteo"
+authors = ["Jeremías Goñi"]
+license = "MIT"
+packages = [{ include = "weather_api" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^3.0.0"
+requests = "^2.31.0"
+flask-restx = "^1.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:flask_restx.api"
+]
