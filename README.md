@@ -12,7 +12,7 @@ This is a lightweight Flask API that fetches historical weather data using the [
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/your-user/weather-api.git
+git clone https://github.com/jerem1as/weather-api.git
 cd weather-api
 ```
 
